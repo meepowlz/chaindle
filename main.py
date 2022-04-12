@@ -13,9 +13,17 @@ word_list = ["apple", "tacos", "words", "games", "water"]
 
 def select_word():
     index = random.randint(0, len(word_list) - 1)
+    word = word_list[index]
+    word_split = []
     print(index)
-    print(word_list[index])
-    return word_list[index]
+    print(word)
+    for i, letter in enumerate(word):
+        print(letter)
+        char_split = {
+            letter: 1
+        }
+        word_split.append(char_split)
+    return word
 
 
 def check_word(user_guess, answer):
