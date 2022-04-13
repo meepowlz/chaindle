@@ -23,6 +23,7 @@ def select_word():
             letter: 1
         }
         word_split.append(char_split)
+    print(word_split)
     return word
 
 
@@ -32,6 +33,7 @@ def check_word(user_guess, answer):
         return True
     else:
         for i, letter in enumerate(user_guess):
+            print(f"Letter in index {i} is {letter}")
             if letter in answer:
                 if letter == answer[i]:
                     print(f"{letter} is in the right spot")
